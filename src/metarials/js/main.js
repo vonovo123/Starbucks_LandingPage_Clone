@@ -44,3 +44,37 @@ fadeEls.forEach((fadeEl, idx) => {
     opacity : 1
   })
 })
+
+new Swiper('.notice-line .swiper', {
+  direction: 'vertical',
+  autoplay: true,
+  loop:true
+})
+
+new Swiper('.promotion .swiper', {
+  slidesPerView: 3,
+  spaceBetween: 10,
+  centeredSlides: true,
+  loop: true,
+  autoplay: {
+    delay : 5000
+  },
+  pagination: {
+    el: '.promotion .swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    prevEl: '.promotion .swiper-prev',
+    nextEl: '.promotion .swiper-next'
+  }
+})
+
+const promotionEl = document.querySelector('.promotion');
+const promotionToggleEl = document.querySelector('.toggle_promotion');
+let isHidePromotion = false;
+promotionToggleEl.addEventListener('click', (e) => {
+  console.log(isHidePromotion);
+  isHidePromotion = !isHidePromotion;
+  if (isHidePromotion) promotionEl.classList.add('hide');
+  else promotionEl.classList.remove('hide');
+})
