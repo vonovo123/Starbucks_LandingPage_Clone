@@ -36,3 +36,11 @@ window.addEventListener('scroll', _.throttle(() => {
     )
   }
 }, 300));
+
+const fadeEls = document.querySelectorAll('.visual .fade-in');
+fadeEls.forEach((fadeEl, idx) => {
+  gsap.to(fadeEl, 1, {
+    delay: (idx + 1) * .7,
+    opacity : 1
+  })
+})
