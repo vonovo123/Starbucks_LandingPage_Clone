@@ -1,0 +1,386 @@
+/* COMMON START */
+body {
+  color: #666;
+  font-size: 16px;
+  font-weight: 400;
+  height: 3000px;
+  /* 줄간 */
+  line-height: 1.4;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* 
+ * img 요소는 베이스라인을 가지고 있어서 아래에 공간이있다.
+ * 이를 없에기 위해 block요소로 변경
+*/
+img {
+  display: block;
+}
+
+/* 파란 밑줄 제거  */
+a {
+  text-decoration: none;
+}
+
+/* 가운데정렬용 공통 class  */
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.btn {
+  width: 130px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  transition: .4s;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn.btn--reverse {
+  background-color: #333;
+  color: #fff
+}
+
+.btn.btn--reverse:hover {
+  background-color: transparent;
+  color: #333
+}
+
+.btn.btn--brown {
+  color: #592B18;
+  border-color: #592B18;
+}
+
+.btn.btn--brown:hover {
+  color : #fff;
+  background-color: #592B18;
+}
+
+.btn.btn--gold {
+    color : #D9AABA;
+    border-color: #D9AABA;
+}
+
+.btn.btn--gold:hover {
+      color : #fff;
+      background-color: #D9AABA;
+}
+
+.btn.btn--white {
+  color : #fff;
+  border-color: #fff;
+}
+
+.btn.btn--white:hover {
+    color : #333;
+    background-color: #fff;
+}
+
+/* COMMON END */
+
+/* BODY HEADER START*/
+/* BODY 안에 HEADER 영역 지정 */
+header {
+  width: 100%;
+  background-color: #f6f5f0;
+  border-bottom: 1px solid #c8c8c8;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+}
+
+/* 높이 지정 */
+header>.inner {
+  height: 120px;
+}
+
+/* Logo */
+header .logo {
+  /* 실제 크기가 지정되어있어야 margin을 통해 가운데 정렬 가능 */
+  height: 75px;
+  width: 75px;
+  /* 부모요소내부에 top bottom 위치를 지정한 다음  margin으로 가운데 정렬 */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+/* submenu */
+header .sub-menu {
+  position: absolute;
+  display: flex;
+  top: 10px;
+  right: 0;
+}
+
+/* submenu 하위 컨텐츠 */
+header .sub-menu ul.menu {
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+header .sub-menu ul.menu li {}
+
+/* submenu 하위 컨텐츠 맨앞쪽에 삽선 안함 */
+header .sub-menu ul.menu li:first-child::before {
+  display: none;
+}
+
+/* submenu 하위 컨텐츠 앞쪽에 삽선 */
+header .sub-menu ul.menu li::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 12px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* submenu 하위 컨텐츠 텍스트 스타일  */
+header .sub-menu ul.menu li a {
+  font-size: 12px;
+  padding: 11px 16px;
+  display: block;
+  color: #656565;
+}
+
+/* submenu 하위 컨텐츠 hover 텍스트 스타일 */
+header .sub-menu ul.menu li a:hover {
+  color: #000
+}
+
+/* submenu 하위 검색창 */
+header .sub-menu .search {
+  height: 34px;
+  position: relative;
+}
+
+/* submenu 하위 검색창 스타일 */
+header .sub-menu .search input {
+  width: 36px;
+  height: 34px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  color: #777;
+  font-size: 12px;
+  transition: width 0.4s;
+}
+
+/* submenu 하위 검색창 focus 일때 스타일 */
+header .sub-menu .search input:focus {
+  width: 120px;
+  border-color: #669900;
+
+}
+
+/* submenu 하위 검색창 icon style*/
+header .sub-menu .search .material-icons {
+  height: 24px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  margin: auto;
+  transition: .4s;
+}
+
+/* submenu 하위 검색창 focus 일시 아이콘 투명도*/
+header .sub-menu .search.focused .material-icons {
+  opacity: 0;
+}
+
+/* mainMenu  */
+header .main-menu {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  z-index: 1;
+}
+
+/* mainMenu 하위 매뉴*/
+header .main-menu .item {}
+
+/* mainMenu 하위 매뉴 이름 스타일 */
+header .main-menu .item .item__name {
+  padding: 10px 20px 34px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+/* mainMenu 하위 매뉴 hover 일때 이름 스타일 */
+header .main-menu .item:hover .item__name {
+  background-color: #2c2a29;
+  color: #669900;
+  border-radius: 2px 2px 0 0;
+}
+
+/* mainMenu 하위 매뉴 컨텐츠*/
+header .main-menu .item .item__contents {
+  /* 뷰포트 기준으로 */
+  position: fixed;
+  /* 너비 100% */
+  width: 100%;
+  right: 0;
+  display: none;
+}
+
+/* mainMenu 하위 매뉴 hover 시 메뉴 컨텐츠*/
+header .main-menu .item:hover .item__contents {
+  /* 뷰포트 기준으로 */
+  display: block
+}
+
+/* mainMenu 하위 매뉴 컨텐츠 하위 메뉴*/
+header .main-menu .item .item__contents .contents__menu {
+  background-color: #2c2a29;
+}
+
+/* mainMenu 하위 매뉴 컨텐츠 하위 메뉴 바로 자식에 해당하는 ul 테그 */
+header .main-menu .item .item__contents .contents__menu>ul {
+  display: flex;
+  padding: 20px 0;
+}
+
+/*  mainMenu 하위 매뉴 컨텐츠 하위 메뉴 바로 자식에 해당하는 ul 테그의 바로 자식에 해당하는 li테그 */
+header .main-menu .item .item__contents .contents__menu>ul>li {
+  width: 220px
+}
+
+/* mainMenu 하위 매뉴 컨텐츠 하위 메뉴 바로 자식에 해당하는 ul 테그의 바로 자식에 해당하는 li테그 내부 h4 */
+header .main-menu .item .item__contents .contents__menu>ul>li h4 {
+  padding: 3px 0 12px 0px;
+  font-size: 14px;
+  color: #fff;
+}
+
+/* mainMenu 하위 매뉴 컨텐츠 하위 메뉴 바로 자식에 해당하는 ul 테그의 바로 자식에 해당하는 li테그 내부 li */
+header .main-menu .item .item__contents .contents__menu>ul>li ul li {
+  padding: 5px 0;
+  font-size: 12px;
+  color: #999;
+  cursor: pointer;
+
+}
+
+/* mainMenu 하위 매뉴 컨텐츠 하위 메뉴 바로 자식에 해당하는 ul 테그의 바로 자식에 해당하는 li테그 내부 li hover일때 글자색 */
+header .main-menu .item .item__contents .contents__menu>ul>li ul li:hover {
+  color: #669900
+}
+
+/* mainMenu 하위 매뉴 컨텐츠 두번째 하위 메뉴 */
+header .main-menu .item .item__contents .contents__texture {
+  padding: 26px 0;
+  font-size: 12px;
+  background-image: url("../images/main_menu_pattern.jpg");
+}
+
+/* mainMenu 하위 매뉴 컨텐츠 두번째 하위 메뉴 하위 h4*/
+header .main-menu .item .item__contents .contents__texture h4 {
+  color: #999;
+  font-weight: 700;
+
+
+}
+
+/* mainMenu 하위 매뉴 컨텐츠 두번째 하위 메뉴 하위 p*/
+header .main-menu .item .item__contents .contents__texture p {
+  color: #669900;
+  margin: 4px 0 14px;
+}
+
+header .badges {
+  position: absolute;
+  top: 132px;
+  right: 12px;
+  transition: 1s;
+}
+
+header .badges .badge {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, .15);
+  cursor: pointer;
+}
+
+/* VISUAL */
+.visual {
+  margin-top: 120px;
+  background-image: url('../images/visual_bg.jpg');
+  background-position: center;
+}
+
+.visual .inner {
+  height: 646px;
+}
+
+.visual .title {
+  position: absolute;
+  top: 88px;
+  left: -10px;
+}
+
+.visual .title .btn {
+    position: absolute;
+    top:259px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+.visual .cup1.image {
+  position: absolute;
+  bottom: 0px;
+  right: -47px;
+}
+
+.visual .cup1.text {
+  position: absolute;
+  top: 38px;
+  right: 171px;
+}
+
+.visual .cup2.image {
+  position: absolute;
+  bottom: 0px;
+  right: 162px;
+}
+
+.visual .cup2.text {
+  position: absolute;
+  top: 321px;
+  right: 416px;
+}
+
+.visual .spoon.image {
+  position: absolute;
+  bottom: 0px;
+  left: 275px;
+}
+
+.visual .fade-in {
+  opacity: 0;
+}

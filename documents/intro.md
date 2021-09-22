@@ -146,6 +146,19 @@ Chrome default css
 ## 우선순위 :점수가 높은선언이 유리/ 점수가 같으면 선언순서가 느릴수록 
 ### 상속 (x) < 전체선택자(0) < 태그선택자(1) < class선택자(10) < id 선택자(100) < 인라인(1000) < important(9999999)
 
+---
+## BEM(Block Element Modifier)
+### Class 명 작성법
+### 요소__일부분 : lodash로 요소의 일부분임을 표시
+### 요소--상태 : 요소의 상태를 표시
 
+---
+## lodash.js
+`<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>`
 
+### _.throttle(() => {}, time)
+
+---
+## GSAP
+### gsap.to(요소, 지속시간, 옵션);
 
