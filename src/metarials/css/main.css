@@ -3,7 +3,6 @@ body {
   color: #666;
   font-size: 16px;
   font-weight: 400;
-  height: 3000px;
   /* 줄간 */
   line-height: 1.4;
   font-family: 'Nanum Gothic', sans-serif;
@@ -632,4 +631,67 @@ header .badges .badge {
 .rewards .inner {
   background-image: url('/src/metarials/images/rewards.jpg');
   height: 241px;
+}
+
+.youtube{
+position: relative;
+height: 700px;
+background-color: #333;
+overflow: hidden;
+}
+
+.youtube .youtube__area {
+  width : 1920px;
+  position: absolute;
+  left:50%;
+  top:50%;
+  margin-top:calc(1920px * 9 / 16 / -2);
+  margin-left:calc(1920px/ -2);
+
+}
+/* 이미지처리를 위한 가상요소 */
+.youtube .youtube__area::before {
+  content : "";
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-top:56.25%;
+}
+
+.youtube .youtube__cover {
+  background-image: url('/src/metarials/images/video_cover_pattern.png');
+  background-color: rgba(0,0,0,0.3);
+  position:absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+}
+
+#player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+.youtube .inner{
+  height: 700px;
+}
+
+.youtube  .floating1 {
+  position: absolute;
+  top: 50px;
+  left : 0;
+}
+.youtube  .floating2 {
+  position: absolute;
+  top: 350px;
+  left : 150px;
+}
+.youtube  .floating3 {
+  position: absolute;
+  bottom: -200px;
+  right : 0;
 }

@@ -21,19 +21,15 @@ const badgeEl = document.querySelector('header .badges');
 
 window.addEventListener('scroll', _.throttle(() => {
   if (window.scrollY > 500) {
-    gsap.to(badgeEl, .6,
-      {
-        opacity: 0,
-        display: 'none'
-      }
-    );
+    gsap.to(badgeEl, .6, {
+      opacity: 0,
+      display: 'none'
+    });
   } else {
-    gsap.to(badgeEl, .6,
-      {
-        opacity: 1,
-        display: 'block'
-      }
-    )
+    gsap.to(badgeEl, .6, {
+      opacity: 1,
+      display: 'block'
+    })
   }
 }, 300));
 
@@ -41,14 +37,14 @@ const fadeEls = document.querySelectorAll('.visual .fade-in');
 fadeEls.forEach((fadeEl, idx) => {
   gsap.to(fadeEl, 1, {
     delay: (idx + 1) * .7,
-    opacity : 1
+    opacity: 1
   })
 })
 
 new Swiper('.notice-line .swiper', {
   direction: 'vertical',
   autoplay: true,
-  loop:true
+  loop: true
 })
 
 new Swiper('.promotion .swiper', {
@@ -57,7 +53,7 @@ new Swiper('.promotion .swiper', {
   centeredSlides: true,
   loop: true,
   autoplay: {
-    delay : 5000
+    delay: 5000
   },
   pagination: {
     el: '.promotion .swiper-pagination',
@@ -78,3 +74,20 @@ promotionToggleEl.addEventListener('click', (e) => {
   if (isHidePromotion) promotionEl.classList.add('hide');
   else promotionEl.classList.remove('hide');
 })
+
+function floatingObject(selector, delay, size) {
+  gsap.to(selector, random(1.5, 2.5), {
+    y: size,
+    repeat: -1,
+    yoyo: true,
+    ease: Power1.easeInOut,
+    delay: random(0, delay)
+  });
+}
+
+function random(min, max) {
+  return parseFloat(Math.random() * (max - min).toFixed(2));
+}
+floatingObject('.floating1', 1, 15)
+floatingObject('.floating2', 0.5, 15)
+floatingObject('.floating3', 1.5, 20)
