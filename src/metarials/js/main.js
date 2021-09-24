@@ -65,6 +65,7 @@ new Swiper('.promotion .swiper', {
   }
 })
 
+
 const promotionEl = document.querySelector('.promotion');
 const promotionToggleEl = document.querySelector('.toggle_promotion');
 let isHidePromotion = false;
@@ -91,3 +92,19 @@ function random(min, max) {
 floatingObject('.floating1', 1, 15)
 floatingObject('.floating2', 0.5, 15)
 floatingObject('.floating3', 1.5, 20)
+
+const spyEls = document.querySelectorAll('section.scroll-spy');
+spyEls.forEach(spyEl => {
+  // scroll spy
+  new ScrollMagic
+    .Scene(
+      {
+        triggerElement: spyEl,
+        triggerHook: .8 //viewport의 0.8위치에 걸리면
+      }
+    )
+    .setClassToggle(
+      spyEl, 'show'
+    )
+    .addTo(new ScrollMagic.Controller());
+})
