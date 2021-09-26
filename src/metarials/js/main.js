@@ -40,6 +40,12 @@ window.addEventListener('scroll', _.throttle(() => {
     gsap.to(toTopEl, .2, {
       x: 100
     })
+    gsap.to(badgeEl, .6,
+      {
+        opacity: 0,
+        display: 'none'
+      }
+    );
   }
 }, 300));
 
@@ -47,7 +53,7 @@ const fadeEls = document.querySelectorAll('.visual .fade-in');
 fadeEls.forEach((fadeEl, idx) => {
   gsap.to(fadeEl, 1, {
     delay: (idx + 1) * .7,
-    opacity: 1
+    opacity : 1
   })
 })
 
