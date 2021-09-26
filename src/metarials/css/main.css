@@ -3,6 +3,7 @@ body {
   color: #666;
   font-size: 16px;
   font-weight: 400;
+  height: 3000px;
   /* 줄간 */
   line-height: 1.4;
   font-family: 'Nanum Gothic', sans-serif;
@@ -64,62 +65,28 @@ a {
 }
 
 .btn.btn--brown:hover {
-  color: #fff;
+  color : #fff;
   background-color: #592B18;
 }
 
 .btn.btn--gold {
-  color: #D9AABA;
-  border-color: #D9AABA;
+    color : #D9AABA;
+    border-color: #D9AABA;
 }
 
 .btn.btn--gold:hover {
-  color: #fff;
-  background-color: #D9AABA;
+      color : #fff;
+      background-color: #D9AABA;
 }
 
 .btn.btn--white {
-  color: #fff;
+  color : #fff;
   border-color: #fff;
 }
 
 .btn.btn--white:hover {
-  color: #333;
-  background-color: #fff;
-}
-
-.back-to-position {
-  opacity: 0;
-  transition: 1s;
-}
-
-.back-to-position.to-right {
-  transform: translateX(-150px);
-}
-
-.back-to-position.to-left {
-  transform: translateX(150px);
-}
-
-.show .back-to-position {
-  opacity: 1;
-  transform: translate(0px)
-}
-
-.show .back-to-position.delay-0 {
-  transition-delay: 0;
-}
-
-.show .back-to-position.delay-1 {
-  transition-delay: 0.3s;
-}
-
-.show .back-to-position.delay-2 {
-  transition-delay: .6s;
-}
-
-.show .back-to-position.delay-3 {
-  transition-delay: .9s;
+    color : #333;
+    background-color: #fff;
 }
 
 /* COMMON END */
@@ -377,11 +344,11 @@ header .badges .badge {
 }
 
 .visual .title .btn {
-  position: absolute;
-  top: 259px;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
+    position: absolute;
+    top:259px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
 }
 
 .visual .cup1.image {
