@@ -162,3 +162,13 @@ Chrome default css
 ## GSAP
 ### gsap.to(요소, 지속시간, 옵션);
 
+## swiperjs
+
+## 비율 도형 만들기
+### 부모요소 width 지정
+## 자식요소 width: 100% heigth : 0 padding top : (100 / 원하는 비율)%
+### 예) youtude 16:9 자식요소 padding top 56.25%로 지정
+
+## youtube iframe API
+
+## scrollMagic
