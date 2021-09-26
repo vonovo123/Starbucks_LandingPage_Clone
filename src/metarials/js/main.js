@@ -21,14 +21,24 @@ const badgeEl = document.querySelector('header .badges');
 
 window.addEventListener('scroll', _.throttle(() => {
   if (window.scrollY > 500) {
+    // 배지숨기기
     gsap.to(badgeEl, .6, {
       opacity: 0,
       display: 'none'
     });
+    // 버튼보이기
+    gsap.to('#to-top', .2, {
+      x: 0
+    })
   } else {
+    // 배지보이기
     gsap.to(badgeEl, .6, {
       opacity: 1,
       display: 'block'
+    })
+    // 버튼 숨기기
+    gsap.to(toTopEl, .2, {
+      x: 100
     })
   }
 }, 300));
@@ -121,3 +131,12 @@ spyEls.forEach(spyEl => {
     .addTo(new ScrollMagic.Controller());
 })
 
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = (new Date().getFullYear());
+
+const toTopEl = document.querySelector('#to-top');
+toTopEl.addEventListener('click', () => {
+  gsap.to(window, .7, {
+    scrollTo: 0
+  })
+})
