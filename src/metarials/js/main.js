@@ -46,13 +46,6 @@ window.addEventListener('scroll', _.throttle(() => {
         display: 'none'
       }
     );
-  } else {
-    gsap.to(badgeEl, .6,
-      {
-        opacity: 1,
-        display: 'block'
-      }
-    )
   }
 }, 300));
 
