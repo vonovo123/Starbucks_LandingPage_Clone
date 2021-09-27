@@ -70,3 +70,4 @@ git의 초기환경을 설정합니다
 > origin(원격저장소)에 현재 프로젝트의 버전내역을 업로드 합니다.
 
 ## netlify를 활용한 배포
+https://app.netlify.com/teams/vonovo123/overview
