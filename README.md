@@ -6,8 +6,8 @@
 [main 브렌치로 이동](https://github.com/vonovo123/Starbucks_LandingPage_Clone)
 
 
-<!-- [DEMO](https://flamboyant-lumiere-482a1e.netlify.app/) <br/>
-[DEMO+signin](https://priceless-bhabha-83fc0d.netlify.app/) -->
+[DEMO](https://priceless-murdock-1cb952.netlify.app) <br/>
+<!-- [DEMO+signin](https://priceless-bhabha-83fc0d.netlify.app/) -->
 
 
 ![StarBucks](https://raw.githubusercontent.com/vonovo123/Starbucks_LandingPage_Clone/main/documents/main_screenshot.png)
