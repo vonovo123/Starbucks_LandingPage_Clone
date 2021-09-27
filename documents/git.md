@@ -107,3 +107,14 @@ https://app.netlify.com/teams/vonovo123/overview
 ```
 > ORIG_HEAD(기존 버전)으로 돌아갑니다.
 
+## 원격저장소의 브랜치로 체크아웃하기
+원격 저장소의 브랜치로 체크아웃합니다
+```
+$git checkout -t origin branch명
+```
+
+## 브렌치 삭제
+브렌치를 삭제합니다
+```
+$git -d 브렌치 명
+```
