@@ -71,3 +71,17 @@ git의 초기환경을 설정합니다
 
 ## netlify를 활용한 배포
 https://app.netlify.com/teams/vonovo123/overview
+
+## branch 목록 확인
+생성된 브랜치 목록을 확인합니다.
+```
+  $git branch
+```
+- `-a` : 원격 저장소의 브랜치까지 일괄 조회합니다.
+- `branch name` : branch name으로 branch를 생성합니다.
+
+## branch 변경
+브랜치를 변경합니다.
+```
+  $git checkout branch name
+```
