@@ -78,6 +78,7 @@ https://app.netlify.com/teams/vonovo123/overview
   $git branch
 ```
 - `-a` : 원격 저장소의 브랜치까지 일괄 조회합니다.
+- `-r` : 원격 저장소의 브랜치를 조회합니다.
 - `branch name` : branch name으로 branch를 생성합니다.
 
 ## branch 변경
@@ -85,3 +86,24 @@ https://app.netlify.com/teams/vonovo123/overview
 ```
   $git checkout branch name
 ```
+
+## clone으로 저장소 복사하기
+원격저장소를 로컬파일로 복제합니다
+```
+  $git clone repo 주소
+```
+
+## reset으로 버전 되돌리기
+과거 버전으로 되돌립니다.
+```
+  $git reset --hard HEAD~1
+```
+> HEAD(최신버전)으로 부터 1만큼 이전버전으로 완전히(hard) 되돌리겠다.
+
+## 되돌리기 원복하기
+되돌리기를 취소하고 기존상태로 돌아옵니다
+```
+  $git reset --hard ORIG_HEAD
+```
+> ORIG_HEAD(기존 버전)으로 돌아갑니다.
+
