@@ -1,0 +1,28 @@
+{
+  "name": "fc_starbucks_clone",
+  "version": "1.0.0",
+  "description": "스타벅스 렌딩 페이지 입니다. <br> ⬇ 자세한 사항은 아래 내용을 확인하세요.",
+  "main": "index.js",
+  "scripts": {
+    "dev" : "parcel index.html",
+    "build": "parcel bundle index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vonovo123/Starbucks_LandingPage_Clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vonovo123/Starbucks_LandingPage_Clone/issues"
+  },
+  "homepage": "https://github.com/vonovo123/Starbucks_LandingPage_Clone#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "rodash": "^1.0.2"
+  }
+}
