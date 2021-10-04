@@ -1,3 +1,4 @@
+import _ from 'lodash'
 const badgeEl = document.querySelector('header .badges');
 
 window.addEventListener('scroll', _.throttle(() => {
